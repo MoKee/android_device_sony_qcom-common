@@ -2180,10 +2180,10 @@ static int responseStringsDataRegistrationState(Parcel &p, void *response, size_
     if (p_cur[3] != NULL) {
 #ifdef RIL_LEGACY_PAP
         if (strncmp(p_cur[3], "18", 2) == 0) {
-            ALOGE("DATA_REGISTRATION_STATE: stock radioTechnology=18 (QCOM HSPAP_DC) -> CyanogenMod radioTechnology=30 (CM DCHSPAP)");
+            ALOGE("DATA_REGISTRATION_STATE: stock radioTechnology=18 (QCOM HSPAP_DC) -> MoKee OpenSource radioTechnology=30 (CM DCHSPAP)");
 #else
         if (strncmp(p_cur[3], "19", 2) == 0) {
-            ALOGE("DATA_REGISTRATION_STATE: stock radioTechnology=19 (QCOM HSPAP_DC) -> CyanogenMod radioTechnology=30 (CM DCHSPAP)");
+            ALOGE("DATA_REGISTRATION_STATE: stock radioTechnology=19 (QCOM HSPAP_DC) -> MoKee OpenSource radioTechnology=30 (CM DCHSPAP)");
 #endif
             strncpy(p_cur[3], "15", 2);
         }
